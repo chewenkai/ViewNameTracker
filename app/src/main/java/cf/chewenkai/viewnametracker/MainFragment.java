@@ -1,12 +1,12 @@
 package cf.chewenkai.viewnametracker;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 /**
  * Created by calvinche
@@ -21,7 +21,7 @@ public class MainFragment extends Fragment {
         rootView.findViewById(R.id.activity_jump_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getActivity(), "Hi", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getActivity(), SecondActivity.class));
             }
         });
         return rootView;

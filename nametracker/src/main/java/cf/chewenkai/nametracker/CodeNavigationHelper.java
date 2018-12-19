@@ -39,17 +39,31 @@ public class CodeNavigationHelper {
     private static final String TAG_WHATICLICK = "What did I clicked？";
     private static final String SPACE = "        ";
 
+    @Before("execution(* *..Activity+.onCreate(..))")
+    public void whichActivityCreate(JoinPoint joinPoint) throws Throwable {
+        String className = joinPoint.getThis().getClass().getSimpleName();
+        Log.i(TAG, "➤ " + TAG_WHEREAMI + " Activity(Create):" + className);
+    }
+
     @Before("execution(* *..Activity+.onResume(..))")
-    public void whichActivity(JoinPoint joinPoint) throws Throwable {
+    public void whichActivityResume(JoinPoint joinPoint) throws Throwable {
             String className = joinPoint.getThis().getClass().getSimpleName();
-            Log.i(TAG, "➤ " + TAG_WHEREAMI + " Activity:" + className);
+            Log.i(TAG, "➤ " + TAG_WHEREAMI + " Activity(Resume):" + className);
+    }
+
+    @Before("execution(* *..Fragment+.onCreateView(..))")
+    public void whichFragmentCreate(JoinPoint joinPoint) throws Throwable {
+
+        String className = joinPoint.getThis().getClass().getSimpleName();
+        Log.i(TAG, SPACE + "➤ " + TAG_WHEREAMI + " Fragment(Create):" + className);
+
     }
 
     @Before("execution(* *..Fragment+.onResume(..))")
-    public void whichFragment(JoinPoint joinPoint) throws Throwable {
+    public void whichFragmentResume(JoinPoint joinPoint) throws Throwable {
 
             String className = joinPoint.getThis().getClass().getSimpleName();
-            Log.i(TAG, SPACE + "➤ " + TAG_WHEREAMI + " Fragment:" + className);
+            Log.i(TAG, SPACE + "➤ " + TAG_WHEREAMI + " Fragment(Resume):" + className);
 
     }
 
