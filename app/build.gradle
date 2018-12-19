@@ -1,0 +1,21 @@
+
+apply plugin: 'com.android.application'
+apply plugin: 'android-aspectjx'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "cf.chewenkai.viewnametracker"
+        minSdkVersion 14
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation project(':nametracker')
+    implementation 'com.android.support:support-compat:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+}

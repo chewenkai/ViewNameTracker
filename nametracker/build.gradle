@@ -1,0 +1,9 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 25
+}
+
+dependencies {
+    implementation 'org.aspectj:aspectjrt:1.8.3'
+}
