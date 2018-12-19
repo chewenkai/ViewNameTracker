@@ -2,8 +2,8 @@
 ### Brief Introduction:
 An Android Library to print the name of current top Activity or Fragment or the view you just clicked for helping read and understand source code rapidly.
 
-### So, What exactly is this litera?
-After you add this library to your project, you can read the name stack of following Android component from **Logcat** by searching the Tag **"NameTracker"**：
+### So, What exactly is this?
+After you add this library to your project, you can read the name stack of following Android component from **Logcat** by searching the Tag **"NameTracker"** ：
 - Activity 
 - Fragment 
 - The view you just clicked.（including the id of the view, and the source position that you can just click to jump）
