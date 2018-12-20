@@ -1,4 +1,7 @@
 # ViewNameTracker
+
+[![](https://jitpack.io/v/chewenkai/ViewNameTracker.svg)](https://jitpack.io/#chewenkai/ViewNameTracker)
+
 ### Brief Introduction:
 An Android Library to print the name of current top Activity or Fragment or the view you just clicked for helping read and understand source code rapidly.
 
