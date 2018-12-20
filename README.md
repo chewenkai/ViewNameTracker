@@ -45,7 +45,10 @@ apply plugin: 'android-aspectjx'  <-- add this to App gradle file (notice, add t
 ```
 3. add this dependency to app gradle file:
 ``` java
-
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.github.chewenkai:ViewNameTracker:1.0'  <-- add this to App gradle file
